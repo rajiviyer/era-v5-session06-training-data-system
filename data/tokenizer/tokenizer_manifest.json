@@ -1,0 +1,13 @@
+{
+  "artifact": "bpe_tokenizer.json",
+  "frozen": true,
+  "manifest_type": "tokenizer",
+  "merge_count": 9980,
+  "model_type": "BPE",
+  "pre_tokenizer": "Metaspace",
+  "special_tokens": [
+    "<unk>"
+  ],
+  "tokenizer_hash": "tok_f841ef5bcf29",
+  "vocab_size": 10000
+}

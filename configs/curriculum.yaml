@@ -1,0 +1,78 @@
+# Toy curriculum for Session 6 demo.
+# Step boundaries align with configs/demo.yaml (total_steps: 50).
+# Subset of Session 5 V5 mixture; consumed by the mixture timeline compiler.
+
+batch:
+  always_on_fraction: 0.11
+  opus_fraction: 0.89
+
+transitions:
+  warmup_steps: 2
+  blend: [0.6, 0.4]  # [outgoing, incoming] OPUS mixture during stage transitions
+
+protected_floors:
+  # Lanes that OPUS may reject unless protected-floor override applies.
+  lanes: [indic, agentic, reasoning]
+
+phases:
+  - name: foundation
+    step_start: 0
+    step_end: 20
+    opus_mixture:
+      web: 0.45
+      code: 0.20
+      indic: 0.12
+      stem: 0.12
+      reasoning: 0.07
+      long_context: 0.02
+      agentic: 0.02
+
+  - name: skill_build
+    step_start: 20
+    step_end: 45
+    opus_mixture:
+      web: 0.30
+      code: 0.24
+      stem: 0.15
+      reasoning: 0.10
+      long_context: 0.05
+      indic: 0.13
+      agentic: 0.03
+
+  - name: anneal
+    step_start: 45
+    step_end: 50
+    lr_multiplier: 0.1
+    anneal_eligible_only: true
+    tier_d_indic_fraction: 0.0
+    opus_mixture:
+      indic: 0.22
+      code: 0.22
+      stem: 0.18
+      reasoning: 0.15
+      long_context: 0.10
+      web: 0.08
+      agentic: 0.05
+
+always_on:
+  fraction: 0.11
+  stage_invariant: true
+  sub_shares:
+    indic_tier_a: 0.40
+    en_in_code_mixed: 0.20
+    india_curated: 0.12
+    benchmark_train_format: 0.15
+    agentic_format: 0.08
+    reasoning_short: 0.05
+
+anneal_reserve:
+  holdback_until_phase: anneal
+  manifest_tag: anneal_eligible
+
+manifest_filters:
+  difficulty_field: curriculum_band
+  reasoning_length_field: reasoning_trace_band
+  anneal_holdback_field: anneal_eligible
+  opus_excludes:
+    - always_on_eligible
+    - anneal_eligible_unreleased

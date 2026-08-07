@@ -1,0 +1,30 @@
+# Standalone dependency manifest for Session 6 submission.
+# Use from this directory after copying session06/assignment/ to its own repo:
+#
+#   python -m venv .venv
+#   .venv/bin/pip install -r requirements.txt    # Linux/macOS
+#   .venv\Scripts\pip install -r requirements.txt  # Windows
+#
+# Or: pip install torch pyyaml pydantic tokenizers pytest
+
+[project]
+name = "session06-training-data-system"
+version = "1.0.0"
+description = "ERA V5 Session 6 — Training Data Execution System"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "torch>=2.3",
+    "pyyaml>=6.0",
+    "pydantic>=2.9",
+    "tokenizers>=0.20",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

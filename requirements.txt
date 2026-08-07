@@ -1,0 +1,10 @@
+# Session 6 runtime dependencies (minimal; no monorepo extras).
+# Install: pip install -r requirements.txt
+
+torch>=2.3
+pyyaml>=6.0
+pydantic>=2.9
+tokenizers>=0.20
+
+# Tests
+pytest>=8.0

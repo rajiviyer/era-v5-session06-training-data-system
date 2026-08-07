@@ -1,0 +1,54 @@
+# Session 6 toy demo run configuration.
+# Scaled for CPU-friendly correctness proofs, not frontier throughput.
+# Paths are relative to session06/assignment/ unless noted.
+
+run:
+  run_id: s6-demo
+  branch_id: run-a
+  seed: 42
+
+training:
+  seq_len: 256
+  global_batch_size: 4
+  microbatch_size: 2
+  gradient_accumulation_steps: 2
+  total_steps: 50
+  checkpoint_interval: 10
+
+recovery:
+  # Train through step 25, crash, resume from checkpoint saved at step 20.
+  crash_at_step: 25
+  resume_from_checkpoint_step: 20
+  replay_start_step: 20
+  replay_end_step: 25
+  fork_from_checkpoint_step: 20
+  fork_branch_id: run-a-fork-1
+
+paths:
+  toy_corpus: data/toy_corpus
+  curriculum_config: configs/curriculum.yaml
+  submission_artifacts: submission_artifacts
+
+model:
+  n_layers: 2
+  n_heads: 4
+  d_model: 128
+  d_ff: 512
+  dropout: 0.0
+
+optimizer:
+  # AdamW with a fixed base LR; curriculum phases scale it via lr_multiplier.
+  name: adamw
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  beta1: 0.9
+  beta2: 0.95
+  grad_clip: 1.0
+
+opus:
+  accept_threshold: 0.62
+  # Target rejection rate for demo visibility; actual rate logged in opus_audit.jsonl.
+  expected_rejection_rate: 0.18
+
+logging:
+  log_every_step: true
