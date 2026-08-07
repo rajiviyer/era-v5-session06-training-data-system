@@ -1,4 +1,4 @@
-# Session 6 — Training Data Execution System
+# Session 6: Training Data Execution System
 #
 #   uv sync --all-groups
 #   uv run python scripts/run_demo.py
@@ -7,7 +7,7 @@
 [project]
 name = "session06-training-data-system"
 version = "1.0.0"
-description = "ERA V5 Session 6 — Training Data Execution System"
+description = "ERA V5 Session 6: Training Data Execution System"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

@@ -32,7 +32,7 @@ def verify_artifacts(artifacts_dir: Path, assignment_root: Path) -> Verification
             failed.append(result.key)
         for item in result.checks:
             if not item.passed:
-                details.append(f"{result.key}: {item.name} — {item.detail}")
+                details.append(f"{result.key}: {item.name}: {item.detail}")
         for path in result.evidence_paths:
             if not (artifacts.root / path).exists():
                 missing_paths.add(path)

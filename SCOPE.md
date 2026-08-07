@@ -487,7 +487,7 @@ Use this order to de-risk the assignment:
 
 | Phase | Deliverable | Depends on |
 |-------|-------------|------------|
-| **P0** | Project layout, config schema, toy corpus | — |
+| **P0** | Project layout, config schema, toy corpus | - |
 | **P1** | Tokenizer freeze + shard builder + manifests | P0, Session 4 corpus optional |
 | **P2** | Packing engine + batch builder (masks, positions) | P1 |
 | **P3** | Mixture compiler + sample planner | P1, Session 5 schedule subset |

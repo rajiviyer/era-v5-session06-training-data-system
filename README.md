@@ -1,4 +1,4 @@
-# Session 6 — Training Data Execution System
+# Session 6: Training Data Execution System
 
 A small but complete training data system: a frozen BPE tokenizer, immutable tokenized
 shards with manifests and an admission gate, two packing policies, a compiled curriculum,
@@ -146,7 +146,7 @@ so 50 training steps finish in about 4 seconds on CPU. What is *not* reduced: th
 tokenizer is the real Session 2 BPE with a merge table, shards are content-hashed and
 immutable, manifests carry lineage and license fields, and the ledger contracts are the
 ones a production system would need. The demo runs on CPU in about 10 seconds, but the
-artifacts — manifests, hashes, ledgers — match what you would audit in a real pipeline.
+artifacts (manifests, hashes, ledgers) match what you would audit in a real pipeline.
 
 ### The eight locked decisions
 
