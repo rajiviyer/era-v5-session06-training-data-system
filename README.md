@@ -50,9 +50,9 @@ uv run pytest tests -v
 GitHub Actions (`.github/workflows/ci.yml`) runs tests, the full demo, and
 `verify_artifacts.py` on every push to `main`.
 
-**Optional:** commit a fresh `submission_artifacts/` tree from one demo run if the grader
-should not have to regenerate it; otherwise `.gitignore` keeps it out and `run_demo.py`
-recreates it.
+**Optional:** commit a fresh `submission_artifacts/` tree from one demo run if you want
+to inspect outputs without re-running the demo; otherwise `.gitignore` keeps it out and
+`run_demo.py` recreates it.
 
 ## Tests
 
@@ -145,8 +145,8 @@ The corpus is 56 documents and the model is 1.71M parameters (2 layers, `d_model
 so 50 training steps finish in about 4 seconds on CPU. What is *not* reduced: the
 tokenizer is the real Session 2 BPE with a merge table, shards are content-hashed and
 immutable, manifests carry lineage and license fields, and the ledger contracts are the
-ones a production system would need. A grader can run the whole thing on a laptop and
-still inspect production-shaped artifacts.
+ones a production system would need. The demo runs on CPU in about 10 seconds, but the
+artifacts — manifests, hashes, ledgers — match what you would audit in a real pipeline.
 
 ### The eight locked decisions
 
