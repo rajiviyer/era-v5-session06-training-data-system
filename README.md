@@ -47,6 +47,9 @@ uv run pytest tests -v
 `pyproject.toml` and `uv.lock` define runtime and dev dependencies; `uv sync` creates
 `.venv` and installs them. Pytest is configured with `pythonpath = ["src"]`.
 
+GitHub Actions (`.github/workflows/ci.yml`) runs tests, the full demo, and
+`verify_artifacts.py` on every push to `main`.
+
 **Optional:** commit a fresh `submission_artifacts/` tree from one demo run if the grader
 should not have to regenerate it; otherwise `.gitignore` keeps it out and `run_demo.py`
 recreates it.

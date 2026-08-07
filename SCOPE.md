@@ -349,12 +349,8 @@ A checkpoint without a data position is **incomplete**. Each checkpoint saves:
 
 One command runs the full demo without manual steps, e.g.:
 
-```powershell
-python session06/assignment/scripts/run_demo.py
-```
-
 ```bash
-python session06/assignment/scripts/run_demo.py
+uv run python scripts/run_demo.py
 ```
 
 **Suggested demo phases (automated):**
@@ -510,7 +506,7 @@ Use this order to de-risk the assignment:
 ## 13. Proposed Repository Layout
 
 ```text
-session06/assignment/
+.
   SCOPE.md                    ← this document
   ASSIGNMENT.md               ← official brief
   README.md                   ← final submission README (architecture + run instructions)

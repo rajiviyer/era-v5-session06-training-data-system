@@ -25,7 +25,7 @@ from .types import (
     RequirementResult,
 )
 
-DEFAULT_DEMO_COMMAND = "python session06/assignment/scripts/run_demo.py"
+DEFAULT_DEMO_COMMAND = "uv run python scripts/run_demo.py"
 
 
 def collect_evidence(

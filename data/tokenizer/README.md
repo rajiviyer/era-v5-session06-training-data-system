@@ -1,6 +1,6 @@
 # Tokenizer artifacts (Session 6)
 
-Frozen **Session 2 BPE** tokenizer (decision D7). Source: `session02/artifacts/tokenizer.json`.
+Frozen **Session 2 BPE** tokenizer (decision D7), committed as `bpe_tokenizer.json`.
 
 | File | Purpose |
 |------|---------|
@@ -8,14 +8,10 @@ Frozen **Session 2 BPE** tokenizer (decision D7). Source: `session02/artifacts/t
 | `tokenizer_hash.json` | Stable `tok_*` fingerprint (vocab + merges + special tokens) |
 | `tokenizer_manifest.json` | Machine-readable tokenizer manifest for shard admission |
 
-Refresh from Session 2 source:
-
-```powershell
-.venv\Scripts\python.exe -c "import sys; sys.path.insert(0, 'session06/assignment/src'); from pathlib import Path; from tokenizer import rebuild_bpe_tokenizer_artifact, default_tokenizer_path; rebuild_bpe_tokenizer_artifact(default_tokenizer_path(Path('session06/assignment')), assignment_root=Path('session06/assignment'))"
-```
+Refresh hash and manifest sidecars from the committed artifact:
 
 ```bash
-.venv/bin/python -c "import sys; sys.path.insert(0, 'session06/assignment/src'); from pathlib import Path; from tokenizer import rebuild_bpe_tokenizer_artifact, default_tokenizer_path; rebuild_bpe_tokenizer_artifact(default_tokenizer_path(Path('session06/assignment')), assignment_root=Path('session06/assignment'))"
+uv run python -c "import sys; from pathlib import Path; sys.path.insert(0, 'src'); from tokenizer import rebuild_bpe_tokenizer_artifact, default_tokenizer_path; root = Path('.'); rebuild_bpe_tokenizer_artifact(default_tokenizer_path(root), assignment_root=root)"
 ```
 
 The legacy WordLevel `toy_tokenizer.json` was removed in P1-T03R.

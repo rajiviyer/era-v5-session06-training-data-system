@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run the full Session 6 demonstration end to end (P11-T02).
 
-    python session06/assignment/scripts/run_demo.py
+    uv run python scripts/run_demo.py
 
 Regenerates `submission_artifacts/` from a clean directory and exits non-zero if any
 phase fails, so it is usable as a CI gate as well as a demo.

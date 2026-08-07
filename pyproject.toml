@@ -1,11 +1,8 @@
-# Standalone dependency manifest for Session 6 submission.
-# Use from this directory after copying session06/assignment/ to its own repo:
+# Session 6 — Training Data Execution System
 #
-#   python -m venv .venv
-#   .venv/bin/pip install -r requirements.txt    # Linux/macOS
-#   .venv\Scripts\pip install -r requirements.txt  # Windows
-#
-# Or: pip install torch pyyaml pydantic tokenizers pytest
+#   uv sync --all-groups
+#   uv run python scripts/run_demo.py
+#   uv run pytest tests -v
 
 [project]
 name = "session06-training-data-system"

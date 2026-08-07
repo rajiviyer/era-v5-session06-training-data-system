@@ -1,6 +1,6 @@
 # Session 6 toy demo run configuration.
 # Scaled for CPU-friendly correctness proofs, not frontier throughput.
-# Paths are relative to session06/assignment/ unless noted.
+# Paths are relative to the repo root unless noted.
 
 run:
   run_id: s6-demo

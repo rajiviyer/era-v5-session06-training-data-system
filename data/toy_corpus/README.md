@@ -12,12 +12,8 @@ Committed toy corpus for the Session 6 demo. **Document text is filled (P1-T04 c
 
 ## Regenerate documents
 
-```powershell
-python session06/assignment/scripts/build_corpus_documents.py
-```
-
 ```bash
-python session06/assignment/scripts/build_corpus_documents.py
+uv run python scripts/build_corpus_documents.py
 ```
 
 ## Design choice (D1)
@@ -60,12 +56,8 @@ Every row in `documents.jsonl` must include the fields listed in `corpus_schema.
 
 ## Validation
 
-```powershell
-python -m pytest session06/assignment/tests/test_corpus_schema.py -v
-```
-
 ```bash
-python -m pytest session06/assignment/tests/test_corpus_schema.py -v
+uv run pytest tests/test_corpus_schema.py -v
 ```
 
 Loader: `src/corpus/` (`load_provenance`, `load_documents`, `validate_document_record`).
