@@ -10,8 +10,6 @@
 
 **Status:** Implementation in progress (medium scale, realistic contracts)
 
-**Also read:** [MENTOR.md](MENTOR.md) (scale, realism, mentor protocol for students and AI assistants)
-
 ---
 
 ## 1. North Star
@@ -547,7 +545,7 @@ session06/assignment/
 
 ## 14. Design Decisions (Medium Scale, Realistic Contracts)
 
-Decisions to lock early so implementation stays focused. See [MENTOR.md](MENTOR.md) for rationale and mentor protocol.
+Decisions to lock early so implementation stays focused.
 
 | Decision | Recommendation | Rationale |
 |----------|----------------|-----------|

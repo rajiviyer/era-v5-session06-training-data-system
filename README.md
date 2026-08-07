@@ -11,12 +11,8 @@ auditable, and measured**, with every claim backed by a file the demo generated.
 
 ## One command
 
-```powershell
-.venv\Scripts\python.exe session06\assignment\scripts\run_demo.py
-```
-
 ```bash
-.venv/bin/python session06/assignment/scripts/run_demo.py
+uv run python scripts/run_demo.py
 ```
 
 It empties `submission_artifacts/`, regenerates everything, and exits non-zero if any
@@ -36,36 +32,20 @@ phase fails. Eleven phases, about 10 seconds on CPU:
 | 10 | Audit `run.log` | 195 events covering all 14 required event types |
 | 11 | Evidence bundle | 14/14 requirements passed |
 
-Read `submission_artifacts/evidence.md` first. It is generated, not written by hand.
+Read `submission_artifacts/evidence.md` first.
 
-## Standalone submission repo
+## Setup
 
-To copy **only** `session06/assignment/` into its own GitHub repo, include the whole
-folder: `src/`, `scripts/`, `configs/`, `data/` (including `data/tokenizer/bpe_tokenizer.json`),
-`tests/`, and this `README.md`. You do **not** need the rest of ERA-v5.
-
-The committed BPE artifact under `data/tokenizer/` is enough to run; the Session 2 copy
-path in `src/tokenizer/bpe.py` is only a refresh fallback when that file is missing.
-
-**Setup** (from the assignment root):
-
-```powershell
-python -m venv .venv
-.venv\Scripts\pip install -r requirements.txt
-.venv\Scripts\python.exe scripts\run_demo.py
-.venv\Scripts\python.exe -m pytest tests -v
-```
+Install [uv](https://docs.astral.sh/uv/), then from the repo root:
 
 ```bash
-python -m venv .venv
-.venv/bin/pip install -r requirements.txt
-.venv/bin/python scripts/run_demo.py
-.venv/bin/python -m pytest tests -v
+uv sync --all-groups
+uv run python scripts/run_demo.py
+uv run pytest tests -v
 ```
 
-`pyproject.toml` in this directory lists the same minimal dependencies and configures
-pytest with `pythonpath = ["src"]`. The monorepo root `pyproject.toml` pulls in extra
-packages (matplotlib, scraping, PDF, etc.) that Session 6 does not use.
+`pyproject.toml` and `uv.lock` define runtime and dev dependencies; `uv sync` creates
+`.venv` and installs them. Pytest is configured with `pythonpath = ["src"]`.
 
 **Optional:** commit a fresh `submission_artifacts/` tree from one demo run if the grader
 should not have to regenerate it; otherwise `.gitignore` keeps it out and `run_demo.py`
@@ -73,12 +53,8 @@ recreates it.
 
 ## Tests
 
-```powershell
-.venv\Scripts\python.exe -m pytest session06/assignment/tests -v
-```
-
 ```bash
-.venv/bin/python -m pytest session06/assignment/tests -v
+uv run pytest tests -v
 ```
 
 220 tests, CPU only, no GPU and no network. They cover every invariant in
@@ -90,12 +66,8 @@ tests in `tests/test_preflight.py` cover the PX stretch scripts.
 
 Audit dataset supply and admission **without** a training run:
 
-```powershell
-.venv\Scripts\python.exe session06\assignment\scripts\dry_run_dataset.py --build-shards
-```
-
 ```bash
-.venv/bin/python session06/assignment/scripts/dry_run_dataset.py --build-shards
+uv run python scripts/dry_run_dataset.py --build-shards
 ```
 
 Writes `reports/dataset_supply.json`, `reports/admission_audit.json`, `reports/data_card.json`,
@@ -103,12 +75,8 @@ and `reports/data_card.md` under `submission_artifacts/`.
 
 Verify generated artifacts in CI:
 
-```powershell
-.venv\Scripts\python.exe session06/assignment/scripts/verify_artifacts.py session06/assignment/submission_artifacts
-```
-
 ```bash
-.venv/bin/python session06/assignment/scripts/verify_artifacts.py session06/assignment/submission_artifacts
+uv run python scripts/verify_artifacts.py submission_artifacts
 ```
 
 Exits 0 when all 14 evidence requirement checks pass; non-zero otherwise.
@@ -256,9 +224,6 @@ submission_artifacts/
 |-----|------|
 | [ASSIGNMENT.md](ASSIGNMENT.md) | Grading contract |
 | [SCOPE.md](SCOPE.md) | Architecture, subsystem detail, invariants |
-| [MENTOR.md](MENTOR.md) | Scale, realism, and how to work on this |
-| [TASKS.md](TASKS.md) | Phased tasks, decisions, and observed results |
-| [REVIEW.md](REVIEW.md) | Complexity guardrails and pre-commit checks |
 
 ## Limitations
 

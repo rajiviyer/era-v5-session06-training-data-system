@@ -37,7 +37,7 @@ Quality tiers (`indic_tier`: A/B) are separate from language tiers (`indic_langu
 
 Text is curated synthetic prose per lane (web, indic native script, code, STEM, reasoning, long context, agentic). Session 5 floor percentages (e.g. T1 ≥10% each at 10T scale) are **not** enforced at medium corpus size.
 
-**Tokenizer:** Final pipeline uses **Session 2 BPE** (decision D7). See [MENTOR.md](../../MENTOR.md) and task P1-T03R in [TASKS.md](../../TASKS.md).
+**Tokenizer:** Final pipeline uses **Session 2 BPE** (decision D7). See `data/tokenizer/bpe_tokenizer.json`.
 
 ## Document lifecycle
 

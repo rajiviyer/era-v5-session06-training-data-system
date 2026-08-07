@@ -6,7 +6,7 @@ from .bpe import (
     ensure_bpe_tokenizer_artifact,
     install_bpe_tokenizer_artifact,
     rebuild_bpe_tokenizer_artifact,
-    session2_bpe_source,
+    committed_bpe_source,
 )
 from .errors import TokenizerFrozenError, TokenizerLoadError, TokenizerManifestError
 from .frozen import FrozenTokenizer, UNK
@@ -37,6 +37,6 @@ __all__ = [
     "load_tokenizer_manifest",
     "persist_tokenizer_hash",
     "rebuild_bpe_tokenizer_artifact",
-    "session2_bpe_source",
+    "committed_bpe_source",
     "write_tokenizer_manifest",
 ]
