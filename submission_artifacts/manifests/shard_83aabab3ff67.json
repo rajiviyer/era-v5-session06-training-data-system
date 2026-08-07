@@ -1,0 +1,22 @@
+{
+  "admission": "blocked",
+  "capability_lane": "web",
+  "cleaning_pipeline_hash": "clean_toy_v1",
+  "content_hash": "sha256:83aabab3ff6713c16b1654d7e33e03af24f28c526c8dae78a1cd8e2ca4823d32",
+  "dedup_status": "passed",
+  "document_ids": [
+    "doc-eval-001"
+  ],
+  "eval_overlap_status": "overlap_detected",
+  "language": "en",
+  "license_tier": "safe",
+  "parent_manifest_ids": [],
+  "pii_screen_status": "screened",
+  "script": "Latin",
+  "shard_id": "shard_83aabab3ff67",
+  "source_ids": [
+    "src-toy-eval-mmlu"
+  ],
+  "token_count": 58,
+  "tokenizer_hash": "tok_f841ef5bcf29"
+}

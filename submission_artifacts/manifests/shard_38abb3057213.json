@@ -1,0 +1,26 @@
+{
+  "admission": "admitted",
+  "capability_lane": "reasoning",
+  "cleaning_pipeline_hash": "clean_toy_v1",
+  "content_hash": "sha256:38abb30572136a248217833d0065a5e14bcc3f41e5c886633152b641547b36db",
+  "dedup_status": "passed",
+  "document_ids": [
+    "doc-reasoning-001",
+    "doc-reasoning-002",
+    "doc-reasoning-003",
+    "doc-reasoning-004",
+    "doc-reasoning-005"
+  ],
+  "eval_overlap_status": "clear",
+  "language": "en",
+  "license_tier": "safe",
+  "parent_manifest_ids": [],
+  "pii_screen_status": "screened",
+  "script": "Latin",
+  "shard_id": "shard_38abb3057213",
+  "source_ids": [
+    "src-toy-web"
+  ],
+  "token_count": 435,
+  "tokenizer_hash": "tok_f841ef5bcf29"
+}

@@ -1,0 +1,450 @@
+{
+  "requirements": {
+    "immutable_shards_with_manifests": {
+      "passed": true,
+      "evidence_path": "manifests/shard_registry.json",
+      "evidence_paths": [
+        "manifests/shard_registry.json",
+        "manifests",
+        "shards"
+      ],
+      "title": "Immutable tokenized shards with manifests",
+      "checks": [
+        {
+          "name": "shard files rehash to their manifest content_hash",
+          "passed": true,
+          "detail": "8 manifests, 8 shard files; mismatched: none"
+        },
+        {
+          "name": "shard_id is derived from the content hash",
+          "passed": true,
+          "detail": "mismatched: none"
+        },
+        {
+          "name": "the registry admits exactly the manifests the gate admitted",
+          "passed": true,
+          "detail": "registry 7 admitted, manifests 7 admitted, 1 blocked (['shard_83aabab3ff67'])"
+        },
+        {
+          "name": "the admission gate blocked at least one shard",
+          "passed": true,
+          "detail": "blocked: ['shard_83aabab3ff67']"
+        }
+      ]
+    },
+    "frozen_tokenizer_hashes": {
+      "passed": true,
+      "evidence_path": "manifests/tokenizer_manifest.json",
+      "evidence_paths": [
+        "manifests/tokenizer_manifest.json",
+        "manifests"
+      ],
+      "title": "Frozen tokenizer and content hashes",
+      "checks": [
+        {
+          "name": "manifest tokenizer_hash recomputes from the tokenizer artifact",
+          "passed": true,
+          "detail": "recomputed tok_f841ef5bcf29 vs manifest tok_f841ef5bcf29 (bpe_tokenizer.json)"
+        },
+        {
+          "name": "the frozen tokenizer is BPE with a non-empty merge table",
+          "passed": true,
+          "detail": "model_type BPE, 9980 merges, vocab 10000"
+        },
+        {
+          "name": "every shard was sealed with that tokenizer hash",
+          "passed": true,
+          "detail": "shard manifest hashes: ['tok_f841ef5bcf29']"
+        },
+        {
+          "name": "every consumed batch records that tokenizer hash",
+          "passed": true,
+          "detail": "ledger hashes: ['tok_f841ef5bcf29']"
+        }
+      ]
+    },
+    "packing_policies": {
+      "passed": true,
+      "evidence_path": "reports/packing_utilization.json",
+      "evidence_paths": [
+        "reports/packing_utilization.json"
+      ],
+      "title": "Packing policies for different data types",
+      "checks": [
+        {
+          "name": "both packing policies ran",
+          "passed": true,
+          "detail": "policies: ['concat_and_chop', 'structure_preserving']"
+        },
+        {
+          "name": "the aggregate covers exactly the policies the batches used",
+          "passed": true,
+          "detail": "batch rows used ['concat_and_chop', 'structure_preserving']"
+        },
+        {
+          "name": "the policies pack to different utilization",
+          "passed": true,
+          "detail": "concat_and_chop 0.627, structure_preserving 0.435"
+        }
+      ]
+    },
+    "correct_masks": {
+      "passed": true,
+      "evidence_path": "ledgers/consumption.jsonl",
+      "evidence_paths": [
+        "ledgers/consumption.jsonl",
+        "reports/packing_utilization.json"
+      ],
+      "title": "Correct loss, attention, and position IDs",
+      "checks": [
+        {
+          "name": "every consumed batch used a causal attention mask",
+          "passed": true,
+          "detail": "attention policies: ['causal']"
+        },
+        {
+          "name": "every consumed batch recorded its position ID policy",
+          "passed": true,
+          "detail": "position policies: ['reset_at_document_boundary']"
+        },
+        {
+          "name": "every consumed batch carries a loss mask hash",
+          "passed": true,
+          "detail": "60 rows; unhashed: none"
+        },
+        {
+          "name": "0 < loss-bearing tokens <= non-pad tokens <= capacity for every batch",
+          "passed": true,
+          "detail": "60 batches recounted; violations: none"
+        },
+        {
+          "name": "some tokens were seen but excluded from the loss",
+          "passed": true,
+          "detail": "60 of 60 batches mask part of what they read (loss-bearing fraction 0.495)"
+        }
+      ]
+    },
+    "curriculum_and_floors": {
+      "passed": true,
+      "evidence_path": "schedule.json",
+      "evidence_paths": [
+        "schedule.json",
+        "ledgers/opus_audit.jsonl"
+      ],
+      "title": "Curriculum stages, lane weights, protected floors",
+      "checks": [
+        {
+          "name": "the schedule compiles at least three curriculum stages",
+          "passed": true,
+          "detail": "stages: ['foundation', 'skill_build', 'anneal']"
+        },
+        {
+          "name": "every step meets the Always-ON floor",
+          "passed": true,
+          "detail": "floor 0.11; 50 steps; below floor: none"
+        },
+        {
+          "name": "the run consumed batches under more than one stage",
+          "passed": true,
+          "detail": "stages in the ledger: ['anneal', 'foundation', 'skill_build']"
+        },
+        {
+          "name": "stage transitions were logged and name compiled stages",
+          "passed": true,
+          "detail": "2 transitions into ['anneal', 'skill_build']"
+        },
+        {
+          "name": "protected-floor lanes bypassed OPUS at least once",
+          "passed": true,
+          "detail": "10 overrides on lanes ['indic', 'reasoning']; protected lanes ['agentic', 'indic', 'reasoning']"
+        }
+      ]
+    },
+    "eval_firewall": {
+      "passed": true,
+      "evidence_path": "eval_registry.json",
+      "evidence_paths": [
+        "eval_registry.json",
+        "run.log"
+      ],
+      "title": "Evaluation and validation firewall",
+      "checks": [
+        {
+          "name": "the registry marks at least one document never_train",
+          "passed": true,
+          "detail": "never_train documents: ['doc-eval-001']"
+        },
+        {
+          "name": "no never-train document reached the consumption ledger",
+          "passed": true,
+          "detail": "41 distinct samples consumed; leaked: none"
+        },
+        {
+          "name": "the firewall blocked at least one candidate during the run",
+          "passed": true,
+          "detail": "11 blocks, reasons ['canary_string_match']"
+        },
+        {
+          "name": "no blocked candidate was later committed",
+          "passed": true,
+          "detail": "blocked candidates also committed: none"
+        }
+      ]
+    },
+    "opus_audit_trail": {
+      "passed": true,
+      "evidence_path": "ledgers/opus_audit.jsonl",
+      "evidence_paths": [
+        "ledgers/opus_audit.jsonl",
+        "ledgers/consumption.jsonl"
+      ],
+      "title": "OPUS accept / reject / defer / override audit",
+      "checks": [
+        {
+          "name": "all four OPUS decision types appear",
+          "passed": true,
+          "detail": "decisions: ['accepted', 'deferred', 'protected_override', 'rejected']"
+        },
+        {
+          "name": "every committed batch has a matching audit record",
+          "passed": true,
+          "detail": "60 committed batches; unmatched: none"
+        },
+        {
+          "name": "a committed batch's audit record says it was accepted",
+          "passed": true,
+          "detail": "committed under a non-accepting decision: none"
+        },
+        {
+          "name": "rejected and deferred candidates stayed queryable",
+          "passed": true,
+          "detail": "40 of 100 audit records are rejections or deferrals, still on file"
+        }
+      ]
+    },
+    "consumption_ledger": {
+      "passed": true,
+      "evidence_path": "ledgers/consumption.jsonl",
+      "evidence_paths": [
+        "ledgers/consumption.jsonl"
+      ],
+      "title": "Training consumption ledger",
+      "checks": [
+        {
+          "name": "the ledger loads under append-only ordering rules",
+          "passed": true,
+          "detail": "60 rows across attempts [0, 1]; load_consumption_ledger rejects a decreasing attempt, a non-incrementing offset, or an attempt starting past the previous tail"
+        },
+        {
+          "name": "offsets increment by one within every attempt",
+          "passed": true,
+          "detail": "offsets per attempt: attempt 0 0..25, attempt 1 19..52"
+        },
+        {
+          "name": "every step in the run reconstructs from the ledger",
+          "passed": true,
+          "detail": "40 steps reconstructed; failed: none"
+        },
+        {
+          "name": "a crashed attempt's rows were retained, not overwritten",
+          "passed": true,
+          "detail": "attempts on file: [0, 1]"
+        }
+      ]
+    },
+    "learning_ledger": {
+      "passed": true,
+      "evidence_path": "ledgers/learning.jsonl",
+      "evidence_paths": [
+        "ledgers/learning.jsonl",
+        "ledgers/consumption.jsonl"
+      ],
+      "title": "Learning ledger linked to consumption",
+      "checks": [
+        {
+          "name": "every learning row joins to a committed batch",
+          "passed": true,
+          "detail": "120 learning rows against 60 committed batches; 0 orphans, 0 unreported, 0 mismatches"
+        },
+        {
+          "name": "at least one shard shows a loss trend across exposures",
+          "passed": true,
+          "detail": "shard_b97a1486440d 28 exposures, loss_delta -0.459; shard_f40fe4d44010 27 exposures, loss_delta -1.159; shard_70fd8df8589f 16 exposures, loss_delta -1.367"
+        },
+        {
+          "name": "perplexity re-derives from the recorded loss",
+          "passed": true,
+          "detail": "7 shard aggregates; mismatched: none"
+        }
+      ]
+    },
+    "checkpoint_ledger_binding": {
+      "passed": true,
+      "evidence_path": "checkpoints/ckpt-00010/checkpoint.json",
+      "evidence_paths": [
+        "checkpoints/ckpt-00010/checkpoint.json",
+        "checkpoints/ckpt-00020/checkpoint.json",
+        "checkpoints/ckpt-00030/checkpoint.json",
+        "checkpoints/ckpt-00040/checkpoint.json",
+        "checkpoints/ckpt-00050/checkpoint.json",
+        "ledgers/consumption.jsonl"
+      ],
+      "title": "Checkpoints tied to ledger offsets",
+      "checks": [
+        {
+          "name": "checkpoints exist",
+          "passed": true,
+          "detail": "5 checkpoints: ['ckpt-00010', 'ckpt-00020', 'ckpt-00030', 'ckpt-00040', 'ckpt-00050']"
+        },
+        {
+          "name": "every checkpoint records ledger_offset and branch_id",
+          "passed": true,
+          "detail": "unbound: none"
+        },
+        {
+          "name": "every checkpoint's tensor sidecars are on disk",
+          "passed": true,
+          "detail": "missing model/optimizer state: none"
+        },
+        {
+          "name": "no checkpoint claims an offset past the ledger tail",
+          "passed": true,
+          "detail": "ledger tail 52; ahead of it: none"
+        }
+      ]
+    },
+    "crash_resume_no_skip_repeat": {
+      "passed": true,
+      "evidence_path": "reports/resume_verification.json",
+      "evidence_paths": [
+        "reports/resume_verification.json",
+        "ledgers/consumption.jsonl"
+      ],
+      "title": "Crash recovery with no skipped or repeated batch",
+      "checks": [
+        {
+          "name": "the run crashed and then resumed",
+          "passed": true,
+          "detail": "crash at step 25, resume from step 20"
+        },
+        {
+          "name": "re-verifying the ledger reproduces the report's verdict",
+          "passed": true,
+          "detail": "recomputed passed=True, report passed=True"
+        },
+        {
+          "name": "no batch was skipped and none was repeated",
+          "passed": true,
+          "detail": "7 batches compared, 0 skipped, 0 repeated"
+        },
+        {
+          "name": "post-resume batch hashes equal the pre-crash record",
+          "passed": true,
+          "detail": "7 of 7 matched on content hash, mask hash, sample IDs, and token spans"
+        }
+      ]
+    },
+    "replay_hash_match": {
+      "passed": true,
+      "evidence_path": "reports/replay_verification.json",
+      "evidence_paths": [
+        "reports/replay_verification.json",
+        "ledgers/consumption.jsonl"
+      ],
+      "title": "Replay of a historical range matches recorded hashes",
+      "checks": [
+        {
+          "name": "a historical range was replayed",
+          "passed": true,
+          "detail": "steps 20..25, 8 batches replayed"
+        },
+        {
+          "name": "every rebuilt batch hashes to what was recorded",
+          "passed": true,
+          "detail": "content and loss-mask hash mismatches: none"
+        },
+        {
+          "name": "the planner re-drew the same samples and spans",
+          "passed": true,
+          "detail": "planner or span mismatches: none"
+        },
+        {
+          "name": "the replayed hashes match the consumption ledger row by row",
+          "passed": true,
+          "detail": "joined on (attempt, ledger_offset); disagreements: none"
+        }
+      ]
+    },
+    "fork_new_branch": {
+      "passed": true,
+      "evidence_path": "reports/fork_verification.json",
+      "evidence_paths": [
+        "reports/fork_verification.json",
+        "ledgers/forks.jsonl",
+        "branches/run-a-fork-1/ledgers/consumption.jsonl"
+      ],
+      "title": "Fork from an earlier checkpoint onto a new branch",
+      "checks": [
+        {
+          "name": "the fork was given a new branch_id",
+          "passed": true,
+          "detail": "parent run-a, child run-a-fork-1"
+        },
+        {
+          "name": "the parent's fork log records the parent branch and fork offset",
+          "passed": true,
+          "detail": "1 fork events; linked: from ckpt step 20 at parent offset 18"
+        },
+        {
+          "name": "the child branch has its own ledger, written under its own branch_id",
+          "passed": true,
+          "detail": "7 rows at branches/run-a-fork-1/ledgers/consumption.jsonl; branch_ids ['run-a-fork-1']"
+        },
+        {
+          "name": "the forked stream diverges from the parent after the fork point",
+          "passed": true,
+          "detail": "diverges at step 20 across 25 of 25 compared steps"
+        }
+      ]
+    },
+    "packing_and_throughput": {
+      "passed": true,
+      "evidence_path": "reports/packing_utilization.json",
+      "evidence_paths": [
+        "reports/packing_utilization.json",
+        "reports/throughput.json",
+        "reports/step_timings.jsonl"
+      ],
+      "title": "Packing utilization and useful tokens/sec",
+      "checks": [
+        {
+          "name": "run utilization recomputes from the per-batch rows",
+          "passed": true,
+          "detail": "10257/17152 = 0.598006 vs reported 0.598006 (useful_tokens / (seq_len * num_sequences))"
+        },
+        {
+          "name": "the reported wall time is the sum of the recorded step timings",
+          "passed": true,
+          "detail": "4.0551s from 55 timing rows vs reported 4.0551s"
+        },
+        {
+          "name": "loss-bearing tokens/sec recomputes from tokens and seconds",
+          "passed": true,
+          "detail": "8488 tokens / 4.06s = 2093.2 vs reported 2093.2"
+        },
+        {
+          "name": "no step was measured without a timing, and useful <= raw throughput",
+          "passed": true,
+          "detail": "45 steps measured, 0 untimed; 2093 useful vs 2529 raw tokens/s"
+        }
+      ]
+    }
+  },
+  "passed": true,
+  "failed_requirements": [],
+  "missing_evidence_paths": [],
+  "generated_at": "2026-08-07T16:51:47Z",
+  "demo_command": "uv run python scripts/run_demo.py",
+  "git_commit": "0bf8393c794f49535fe68fcdf0a16c1cd8133bab",
+  "artifacts_dir": "submission_artifacts"
+}

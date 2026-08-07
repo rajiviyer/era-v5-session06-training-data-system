@@ -1,0 +1,39 @@
+{
+  "admission": "admitted",
+  "capability_lane": "indic",
+  "cleaning_pipeline_hash": "clean_toy_v1",
+  "content_hash": "sha256:b97a1486440de176dc4aa2250047eb630b946f8dcec9a4a05788da4101e6f9ec",
+  "dedup_status": "passed",
+  "document_ids": [
+    "doc-anneal-001",
+    "doc-indic-001",
+    "doc-indic-bn-001",
+    "doc-indic-bn-002",
+    "doc-indic-bn-003",
+    "doc-indic-gu-001",
+    "doc-indic-gu-002",
+    "doc-indic-hi-002",
+    "doc-indic-hi-003",
+    "doc-indic-kn-001",
+    "doc-indic-ml-001",
+    "doc-indic-mr-001",
+    "doc-indic-mr-002",
+    "doc-indic-ta-001",
+    "doc-indic-ta-002",
+    "doc-indic-ta-003",
+    "doc-indic-te-001",
+    "doc-indic-te-002"
+  ],
+  "eval_overlap_status": "clear",
+  "language": "multi",
+  "license_tier": "safe",
+  "parent_manifest_ids": [],
+  "pii_screen_status": "screened",
+  "script": "multi",
+  "shard_id": "shard_b97a1486440d",
+  "source_ids": [
+    "src-toy-indic"
+  ],
+  "token_count": 1639,
+  "tokenizer_hash": "tok_f841ef5bcf29"
+}

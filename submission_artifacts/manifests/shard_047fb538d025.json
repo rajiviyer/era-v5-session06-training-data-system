@@ -1,0 +1,28 @@
+{
+  "admission": "admitted",
+  "capability_lane": "agentic",
+  "cleaning_pipeline_hash": "clean_toy_v1",
+  "content_hash": "sha256:047fb538d0252cafcf1081b3b833b70de18075266245f42d61ca8f889bb6d58f",
+  "dedup_status": "passed",
+  "document_ids": [
+    "doc-agentic-001",
+    "doc-agentic-002",
+    "doc-agentic-003",
+    "doc-agentic-004",
+    "doc-agentic-005",
+    "doc-agentic-006",
+    "doc-agentic-007"
+  ],
+  "eval_overlap_status": "clear",
+  "language": "en",
+  "license_tier": "safe",
+  "parent_manifest_ids": [],
+  "pii_screen_status": "screened",
+  "script": "Latin",
+  "shard_id": "shard_047fb538d025",
+  "source_ids": [
+    "src-toy-agentic"
+  ],
+  "token_count": 919,
+  "tokenizer_hash": "tok_f841ef5bcf29"
+}

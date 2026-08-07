@@ -1,0 +1,27 @@
+{
+  "admission": "admitted",
+  "capability_lane": "stem",
+  "cleaning_pipeline_hash": "clean_toy_v1",
+  "content_hash": "sha256:0fdc1ff301f7b50a9c635eec2ebb49d086adbb52e7f4d7014b443fc38571b444",
+  "dedup_status": "passed",
+  "document_ids": [
+    "doc-stem-001",
+    "doc-stem-002",
+    "doc-stem-003",
+    "doc-stem-004",
+    "doc-stem-005",
+    "doc-stem-006"
+  ],
+  "eval_overlap_status": "clear",
+  "language": "en",
+  "license_tier": "safe",
+  "parent_manifest_ids": [],
+  "pii_screen_status": "screened",
+  "script": "Latin",
+  "shard_id": "shard_0fdc1ff301f7",
+  "source_ids": [
+    "src-toy-web"
+  ],
+  "token_count": 358,
+  "tokenizer_hash": "tok_f841ef5bcf29"
+}

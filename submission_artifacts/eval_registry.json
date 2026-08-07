@@ -1,0 +1,18 @@
+{
+  "entries": [
+    {
+      "benchmark_id": "mmlu_holdout_mirror",
+      "canary_strings": [
+        "MMLU holdout mirror",
+        "Which planet is known as the Red Planet?"
+      ],
+      "content_hash": "sha256:06d1c01ab1c9245dea65fb14b53052b7c472bdb81aa28089cb79a950bf6a4c5a",
+      "document_id": "doc-eval-001",
+      "entry_id": "eval-doc-eval-001",
+      "never_train": true,
+      "shard_id": "shard_83aabab3ff67"
+    }
+  ],
+  "registry_type": "eval",
+  "schema_version": "1.0"
+}

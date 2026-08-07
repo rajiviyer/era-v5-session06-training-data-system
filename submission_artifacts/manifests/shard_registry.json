@@ -1,0 +1,17 @@
+{
+  "admitted_shard_ids": [
+    "shard_047fb538d025",
+    "shard_0fdc1ff301f7",
+    "shard_38abb3057213",
+    "shard_70fd8df8589f",
+    "shard_b97a1486440d",
+    "shard_bb8a9412bea5",
+    "shard_f40fe4d44010"
+  ],
+  "blocked_shard_ids": [
+    "shard_83aabab3ff67"
+  ],
+  "registry_type": "shard",
+  "shard_count": 8,
+  "tokenizer_hash": "tok_f841ef5bcf29"
+}

@@ -1,0 +1,24 @@
+{
+  "admission": "admitted",
+  "capability_lane": "long_context",
+  "cleaning_pipeline_hash": "clean_toy_v1",
+  "content_hash": "sha256:bb8a9412bea5c300135c9d473aac1769b8b69f376e6350f4a33046fe8d876a95",
+  "dedup_status": "passed",
+  "document_ids": [
+    "doc-longctx-001",
+    "doc-longctx-002",
+    "doc-longctx-003"
+  ],
+  "eval_overlap_status": "clear",
+  "language": "en",
+  "license_tier": "safe",
+  "parent_manifest_ids": [],
+  "pii_screen_status": "screened",
+  "script": "Latin",
+  "shard_id": "shard_bb8a9412bea5",
+  "source_ids": [
+    "src-toy-web"
+  ],
+  "token_count": 667,
+  "tokenizer_hash": "tok_f841ef5bcf29"
+}

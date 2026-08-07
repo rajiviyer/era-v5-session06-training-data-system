@@ -1,0 +1,27 @@
+{
+  "admission": "admitted",
+  "capability_lane": "code",
+  "cleaning_pipeline_hash": "clean_toy_v1",
+  "content_hash": "sha256:70fd8df8589f75893baec3946f1767a85f805083e5897d6714688120b13ec898",
+  "dedup_status": "passed",
+  "document_ids": [
+    "doc-code-001",
+    "doc-code-002",
+    "doc-code-003",
+    "doc-code-004",
+    "doc-code-005",
+    "doc-code-006"
+  ],
+  "eval_overlap_status": "clear",
+  "language": "en",
+  "license_tier": "safe",
+  "parent_manifest_ids": [],
+  "pii_screen_status": "screened",
+  "script": "Latin",
+  "shard_id": "shard_70fd8df8589f",
+  "source_ids": [
+    "src-toy-code"
+  ],
+  "token_count": 520,
+  "tokenizer_hash": "tok_f841ef5bcf29"
+}

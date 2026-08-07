@@ -1,0 +1,1472 @@
+{
+  "always_on_fraction": 0.11,
+  "opus_fraction": 0.89,
+  "phase_boundaries": [
+    {
+      "anneal_eligible_only": false,
+      "lr_multiplier": null,
+      "name": "foundation",
+      "opus_mixture": {
+        "agentic": 0.02,
+        "code": 0.2,
+        "indic": 0.12,
+        "long_context": 0.02,
+        "reasoning": 0.07,
+        "stem": 0.12,
+        "web": 0.45
+      },
+      "step_end": 20,
+      "step_start": 0,
+      "tier_d_indic_fraction": null
+    },
+    {
+      "anneal_eligible_only": false,
+      "lr_multiplier": null,
+      "name": "skill_build",
+      "opus_mixture": {
+        "agentic": 0.03,
+        "code": 0.24,
+        "indic": 0.13,
+        "long_context": 0.05,
+        "reasoning": 0.1,
+        "stem": 0.15,
+        "web": 0.3
+      },
+      "step_end": 45,
+      "step_start": 20,
+      "tier_d_indic_fraction": null
+    },
+    {
+      "anneal_eligible_only": true,
+      "lr_multiplier": 0.1,
+      "name": "anneal",
+      "opus_mixture": {
+        "agentic": 0.05,
+        "code": 0.22,
+        "indic": 0.22,
+        "long_context": 0.1,
+        "reasoning": 0.15,
+        "stem": 0.18,
+        "web": 0.08
+      },
+      "step_end": 50,
+      "step_start": 45,
+      "tier_d_indic_fraction": 0.0
+    }
+  ],
+  "protected_floor_lanes": [
+    "indic",
+    "agentic",
+    "reasoning"
+  ],
+  "schema_version": "1.0",
+  "steps": [
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 0,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 1,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 2,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 3,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 4,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 5,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 6,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 7,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 8,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 9,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 10,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 11,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 12,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 13,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 14,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 15,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 16,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 17,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 18,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.0178,
+        "code": 0.17800000000000002,
+        "indic": 0.10679999999999999,
+        "long_context": 0.0178,
+        "reasoning": 0.06230000000000001,
+        "stem": 0.10679999999999999,
+        "web": 0.4005
+      },
+      "phase": "foundation",
+      "step": 19,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": true,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.02136,
+        "code": 0.19224,
+        "indic": 0.11036,
+        "long_context": 0.028480000000000002,
+        "reasoning": 0.07298000000000002,
+        "stem": 0.11748,
+        "web": 0.3471
+      },
+      "phase": "skill_build",
+      "step": 20,
+      "transition_from": "foundation",
+      "transition_to": "skill_build"
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": true,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.02136,
+        "code": 0.19224,
+        "indic": 0.11036,
+        "long_context": 0.028480000000000002,
+        "reasoning": 0.07298000000000002,
+        "stem": 0.11748,
+        "web": 0.3471
+      },
+      "phase": "skill_build",
+      "step": 21,
+      "transition_from": "foundation",
+      "transition_to": "skill_build"
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 22,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 23,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 24,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 25,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 26,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 27,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 28,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 29,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 30,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 31,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 32,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 33,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 34,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 35,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 36,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 37,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 38,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 39,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 40,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 41,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 42,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 43,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": false,
+      "in_transition": false,
+      "lr_multiplier": null,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.026699999999999998,
+        "code": 0.21359999999999998,
+        "indic": 0.11570000000000001,
+        "long_context": 0.044500000000000005,
+        "reasoning": 0.08900000000000001,
+        "stem": 0.1335,
+        "web": 0.267
+      },
+      "phase": "skill_build",
+      "step": 44,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": true,
+      "in_transition": true,
+      "lr_multiplier": 0.1,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.03382,
+        "code": 0.20648,
+        "indic": 0.14774,
+        "long_context": 0.06230000000000001,
+        "reasoning": 0.10679999999999999,
+        "stem": 0.14417999999999997,
+        "web": 0.18868
+      },
+      "phase": "anneal",
+      "step": 45,
+      "transition_from": "skill_build",
+      "transition_to": "anneal"
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": true,
+      "in_transition": true,
+      "lr_multiplier": 0.1,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.03382,
+        "code": 0.20648,
+        "indic": 0.14774,
+        "long_context": 0.06230000000000001,
+        "reasoning": 0.10679999999999999,
+        "stem": 0.14417999999999997,
+        "web": 0.18868
+      },
+      "phase": "anneal",
+      "step": 46,
+      "transition_from": "skill_build",
+      "transition_to": "anneal"
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": true,
+      "in_transition": false,
+      "lr_multiplier": 0.1,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.044500000000000005,
+        "code": 0.1958,
+        "indic": 0.1958,
+        "long_context": 0.08900000000000001,
+        "reasoning": 0.1335,
+        "stem": 0.1602,
+        "web": 0.0712
+      },
+      "phase": "anneal",
+      "step": 47,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": true,
+      "in_transition": false,
+      "lr_multiplier": 0.1,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.044500000000000005,
+        "code": 0.1958,
+        "indic": 0.1958,
+        "long_context": 0.08900000000000001,
+        "reasoning": 0.1335,
+        "stem": 0.1602,
+        "web": 0.0712
+      },
+      "phase": "anneal",
+      "step": 48,
+      "transition_from": null,
+      "transition_to": null
+    },
+    {
+      "always_on_fraction": 0.11,
+      "always_on_sub_shares": {
+        "agentic_format": 0.08,
+        "benchmark_train_format": 0.15,
+        "en_in_code_mixed": 0.2,
+        "india_curated": 0.12,
+        "indic_tier_a": 0.4,
+        "reasoning_short": 0.05
+      },
+      "anneal_eligible_only": true,
+      "in_transition": false,
+      "lr_multiplier": 0.1,
+      "opus_fraction": 0.89,
+      "opus_lane_quotas": {
+        "agentic": 0.044500000000000005,
+        "code": 0.1958,
+        "indic": 0.1958,
+        "long_context": 0.08900000000000001,
+        "reasoning": 0.1335,
+        "stem": 0.1602,
+        "web": 0.0712
+      },
+      "phase": "anneal",
+      "step": 49,
+      "transition_from": null,
+      "transition_to": null
+    }
+  ],
+  "total_steps": 50,
+  "transition_blend": [
+    0.6,
+    0.4
+  ],
+  "warmup_steps": 2,
+  "warnings": []
+}

@@ -1,0 +1,466 @@
+{
+  "loss_bearing_tokens_per_second": 2093.16,
+  "raw_tokens_per_second": 2529.4,
+  "run_id": "s6-demo",
+  "sources": {
+    "seconds": "reports/step_timings.jsonl",
+    "tokens": "ledgers/consumption.jsonl (batches rebuilt and re-counted)"
+  },
+  "steps": [
+    {
+      "attempt": 0,
+      "global_step": 0,
+      "loss_bearing_tokens": 93,
+      "loss_bearing_tokens_per_second": 418.687,
+      "microbatches": 1,
+      "raw_tokens": 144,
+      "raw_tokens_per_second": 648.289,
+      "wall_seconds": 0.222123
+    },
+    {
+      "attempt": 0,
+      "global_step": 1,
+      "loss_bearing_tokens": 245,
+      "loss_bearing_tokens_per_second": 2313.154,
+      "microbatches": 2,
+      "raw_tokens": 247,
+      "raw_tokens_per_second": 2332.037,
+      "wall_seconds": 0.105916
+    },
+    {
+      "attempt": 0,
+      "global_step": 2,
+      "loss_bearing_tokens": 149,
+      "loss_bearing_tokens_per_second": 2588.064,
+      "microbatches": 1,
+      "raw_tokens": 150,
+      "raw_tokens_per_second": 2605.433,
+      "wall_seconds": 0.057572
+    },
+    {
+      "attempt": 0,
+      "global_step": 3,
+      "loss_bearing_tokens": 295,
+      "loss_bearing_tokens_per_second": 2894.825,
+      "microbatches": 2,
+      "raw_tokens": 297,
+      "raw_tokens_per_second": 2914.451,
+      "wall_seconds": 0.101906
+    },
+    {
+      "attempt": 0,
+      "global_step": 4,
+      "loss_bearing_tokens": 176,
+      "loss_bearing_tokens_per_second": 3001.262,
+      "microbatches": 1,
+      "raw_tokens": 177,
+      "raw_tokens_per_second": 3018.315,
+      "wall_seconds": 0.058642
+    },
+    {
+      "attempt": 0,
+      "global_step": 5,
+      "loss_bearing_tokens": 154,
+      "loss_bearing_tokens_per_second": 2468.463,
+      "microbatches": 1,
+      "raw_tokens": 155,
+      "raw_tokens_per_second": 2484.492,
+      "wall_seconds": 0.062387
+    },
+    {
+      "attempt": 0,
+      "global_step": 6,
+      "loss_bearing_tokens": 99,
+      "loss_bearing_tokens_per_second": 1434.533,
+      "microbatches": 1,
+      "raw_tokens": 136,
+      "raw_tokens_per_second": 1970.672,
+      "wall_seconds": 0.069012
+    },
+    {
+      "attempt": 0,
+      "global_step": 7,
+      "loss_bearing_tokens": 163,
+      "loss_bearing_tokens_per_second": 2413.42,
+      "microbatches": 1,
+      "raw_tokens": 164,
+      "raw_tokens_per_second": 2428.227,
+      "wall_seconds": 0.067539
+    },
+    {
+      "attempt": 0,
+      "global_step": 8,
+      "loss_bearing_tokens": 273,
+      "loss_bearing_tokens_per_second": 2620.49,
+      "microbatches": 2,
+      "raw_tokens": 275,
+      "raw_tokens_per_second": 2639.687,
+      "wall_seconds": 0.104179
+    },
+    {
+      "attempt": 0,
+      "global_step": 9,
+      "loss_bearing_tokens": 170,
+      "loss_bearing_tokens_per_second": 2542.246,
+      "microbatches": 1,
+      "raw_tokens": 171,
+      "raw_tokens_per_second": 2557.201,
+      "wall_seconds": 0.06687
+    },
+    {
+      "attempt": 0,
+      "global_step": 11,
+      "loss_bearing_tokens": 176,
+      "loss_bearing_tokens_per_second": 2963.562,
+      "microbatches": 1,
+      "raw_tokens": 177,
+      "raw_tokens_per_second": 2980.4,
+      "wall_seconds": 0.059388
+    },
+    {
+      "attempt": 0,
+      "global_step": 13,
+      "loss_bearing_tokens": 136,
+      "loss_bearing_tokens_per_second": 865.476,
+      "microbatches": 2,
+      "raw_tokens": 464,
+      "raw_tokens_per_second": 2952.8,
+      "wall_seconds": 0.157139
+    },
+    {
+      "attempt": 0,
+      "global_step": 14,
+      "loss_bearing_tokens": 17,
+      "loss_bearing_tokens_per_second": 199.955,
+      "microbatches": 1,
+      "raw_tokens": 295,
+      "raw_tokens_per_second": 3469.813,
+      "wall_seconds": 0.085019
+    },
+    {
+      "attempt": 0,
+      "global_step": 15,
+      "loss_bearing_tokens": 203,
+      "loss_bearing_tokens_per_second": 3061.425,
+      "microbatches": 1,
+      "raw_tokens": 212,
+      "raw_tokens_per_second": 3197.153,
+      "wall_seconds": 0.066309
+    },
+    {
+      "attempt": 0,
+      "global_step": 18,
+      "loss_bearing_tokens": 181,
+      "loss_bearing_tokens_per_second": 3113.175,
+      "microbatches": 1,
+      "raw_tokens": 182,
+      "raw_tokens_per_second": 3130.375,
+      "wall_seconds": 0.05814
+    },
+    {
+      "attempt": 0,
+      "global_step": 20,
+      "loss_bearing_tokens": 349,
+      "loss_bearing_tokens_per_second": 3200.015,
+      "microbatches": 2,
+      "raw_tokens": 351,
+      "raw_tokens_per_second": 3218.353,
+      "wall_seconds": 0.109062
+    },
+    {
+      "attempt": 0,
+      "global_step": 21,
+      "loss_bearing_tokens": 157,
+      "loss_bearing_tokens_per_second": 2544.571,
+      "microbatches": 1,
+      "raw_tokens": 158,
+      "raw_tokens_per_second": 2560.778,
+      "wall_seconds": 0.0617
+    },
+    {
+      "attempt": 0,
+      "global_step": 22,
+      "loss_bearing_tokens": 168,
+      "loss_bearing_tokens_per_second": 2188.241,
+      "microbatches": 1,
+      "raw_tokens": 169,
+      "raw_tokens_per_second": 2201.266,
+      "wall_seconds": 0.076774
+    },
+    {
+      "attempt": 0,
+      "global_step": 23,
+      "loss_bearing_tokens": 256,
+      "loss_bearing_tokens_per_second": 2343.292,
+      "microbatches": 2,
+      "raw_tokens": 354,
+      "raw_tokens_per_second": 3240.334,
+      "wall_seconds": 0.109248
+    },
+    {
+      "attempt": 0,
+      "global_step": 24,
+      "loss_bearing_tokens": 114,
+      "loss_bearing_tokens_per_second": 1932.007,
+      "microbatches": 1,
+      "raw_tokens": 115,
+      "raw_tokens_per_second": 1948.954,
+      "wall_seconds": 0.059006
+    },
+    {
+      "attempt": 1,
+      "global_step": 20,
+      "loss_bearing_tokens": 349,
+      "loss_bearing_tokens_per_second": 2646.325,
+      "microbatches": 2,
+      "raw_tokens": 351,
+      "raw_tokens_per_second": 2661.49,
+      "wall_seconds": 0.131881
+    },
+    {
+      "attempt": 1,
+      "global_step": 21,
+      "loss_bearing_tokens": 157,
+      "loss_bearing_tokens_per_second": 2449.986,
+      "microbatches": 1,
+      "raw_tokens": 158,
+      "raw_tokens_per_second": 2465.591,
+      "wall_seconds": 0.064082
+    },
+    {
+      "attempt": 1,
+      "global_step": 22,
+      "loss_bearing_tokens": 168,
+      "loss_bearing_tokens_per_second": 2608.777,
+      "microbatches": 1,
+      "raw_tokens": 169,
+      "raw_tokens_per_second": 2624.305,
+      "wall_seconds": 0.064398
+    },
+    {
+      "attempt": 1,
+      "global_step": 23,
+      "loss_bearing_tokens": 256,
+      "loss_bearing_tokens_per_second": 2417.512,
+      "microbatches": 2,
+      "raw_tokens": 354,
+      "raw_tokens_per_second": 3342.966,
+      "wall_seconds": 0.105894
+    },
+    {
+      "attempt": 1,
+      "global_step": 24,
+      "loss_bearing_tokens": 114,
+      "loss_bearing_tokens_per_second": 1910.188,
+      "microbatches": 1,
+      "raw_tokens": 115,
+      "raw_tokens_per_second": 1926.944,
+      "wall_seconds": 0.05968
+    },
+    {
+      "attempt": 1,
+      "global_step": 25,
+      "loss_bearing_tokens": 167,
+      "loss_bearing_tokens_per_second": 1821.772,
+      "microbatches": 1,
+      "raw_tokens": 242,
+      "raw_tokens_per_second": 2639.933,
+      "wall_seconds": 0.091669
+    },
+    {
+      "attempt": 1,
+      "global_step": 27,
+      "loss_bearing_tokens": 104,
+      "loss_bearing_tokens_per_second": 1768.317,
+      "microbatches": 1,
+      "raw_tokens": 105,
+      "raw_tokens_per_second": 1785.32,
+      "wall_seconds": 0.058813
+    },
+    {
+      "attempt": 1,
+      "global_step": 28,
+      "loss_bearing_tokens": 102,
+      "loss_bearing_tokens_per_second": 1566.002,
+      "microbatches": 1,
+      "raw_tokens": 234,
+      "raw_tokens_per_second": 3592.594,
+      "wall_seconds": 0.065134
+    },
+    {
+      "attempt": 1,
+      "global_step": 29,
+      "loss_bearing_tokens": 141,
+      "loss_bearing_tokens_per_second": 2142.076,
+      "microbatches": 1,
+      "raw_tokens": 142,
+      "raw_tokens_per_second": 2157.268,
+      "wall_seconds": 0.065824
+    },
+    {
+      "attempt": 1,
+      "global_step": 30,
+      "loss_bearing_tokens": 196,
+      "loss_bearing_tokens_per_second": 1689.48,
+      "microbatches": 2,
+      "raw_tokens": 328,
+      "raw_tokens_per_second": 2827.294,
+      "wall_seconds": 0.116012
+    },
+    {
+      "attempt": 1,
+      "global_step": 31,
+      "loss_bearing_tokens": 216,
+      "loss_bearing_tokens_per_second": 1872.188,
+      "microbatches": 2,
+      "raw_tokens": 341,
+      "raw_tokens_per_second": 2955.631,
+      "wall_seconds": 0.115373
+    },
+    {
+      "attempt": 1,
+      "global_step": 32,
+      "loss_bearing_tokens": 140,
+      "loss_bearing_tokens_per_second": 2173.036,
+      "microbatches": 1,
+      "raw_tokens": 173,
+      "raw_tokens_per_second": 2685.251,
+      "wall_seconds": 0.064426
+    },
+    {
+      "attempt": 1,
+      "global_step": 33,
+      "loss_bearing_tokens": 167,
+      "loss_bearing_tokens_per_second": 2593.973,
+      "microbatches": 1,
+      "raw_tokens": 168,
+      "raw_tokens_per_second": 2609.506,
+      "wall_seconds": 0.06438
+    },
+    {
+      "attempt": 1,
+      "global_step": 34,
+      "loss_bearing_tokens": 160,
+      "loss_bearing_tokens_per_second": 2515.723,
+      "microbatches": 1,
+      "raw_tokens": 161,
+      "raw_tokens_per_second": 2531.447,
+      "wall_seconds": 0.0636
+    },
+    {
+      "attempt": 1,
+      "global_step": 37,
+      "loss_bearing_tokens": 304,
+      "loss_bearing_tokens_per_second": 1972.745,
+      "microbatches": 2,
+      "raw_tokens": 431,
+      "raw_tokens_per_second": 2796.885,
+      "wall_seconds": 0.1541
+    },
+    {
+      "attempt": 1,
+      "global_step": 38,
+      "loss_bearing_tokens": 316,
+      "loss_bearing_tokens_per_second": 2537.236,
+      "microbatches": 2,
+      "raw_tokens": 318,
+      "raw_tokens_per_second": 2553.294,
+      "wall_seconds": 0.124545
+    },
+    {
+      "attempt": 1,
+      "global_step": 39,
+      "loss_bearing_tokens": 127,
+      "loss_bearing_tokens_per_second": 2066.015,
+      "microbatches": 1,
+      "raw_tokens": 128,
+      "raw_tokens_per_second": 2082.283,
+      "wall_seconds": 0.061471
+    },
+    {
+      "attempt": 1,
+      "global_step": 40,
+      "loss_bearing_tokens": 246,
+      "loss_bearing_tokens_per_second": 3179.774,
+      "microbatches": 1,
+      "raw_tokens": 247,
+      "raw_tokens_per_second": 3192.699,
+      "wall_seconds": 0.077364
+    },
+    {
+      "attempt": 1,
+      "global_step": 41,
+      "loss_bearing_tokens": 346,
+      "loss_bearing_tokens_per_second": 2295.708,
+      "microbatches": 2,
+      "raw_tokens": 421,
+      "raw_tokens_per_second": 2793.333,
+      "wall_seconds": 0.150716
+    },
+    {
+      "attempt": 1,
+      "global_step": 43,
+      "loss_bearing_tokens": 94,
+      "loss_bearing_tokens_per_second": 1147.069,
+      "microbatches": 1,
+      "raw_tokens": 227,
+      "raw_tokens_per_second": 2770.049,
+      "wall_seconds": 0.081948
+    },
+    {
+      "attempt": 1,
+      "global_step": 44,
+      "loss_bearing_tokens": 287,
+      "loss_bearing_tokens_per_second": 1434.943,
+      "microbatches": 2,
+      "raw_tokens": 289,
+      "raw_tokens_per_second": 1444.942,
+      "wall_seconds": 0.200008
+    },
+    {
+      "attempt": 1,
+      "global_step": 45,
+      "loss_bearing_tokens": 152,
+      "loss_bearing_tokens_per_second": 2275.109,
+      "microbatches": 1,
+      "raw_tokens": 153,
+      "raw_tokens_per_second": 2290.076,
+      "wall_seconds": 0.06681
+    },
+    {
+      "attempt": 1,
+      "global_step": 47,
+      "loss_bearing_tokens": 132,
+      "loss_bearing_tokens_per_second": 2222.971,
+      "microbatches": 1,
+      "raw_tokens": 133,
+      "raw_tokens_per_second": 2239.811,
+      "wall_seconds": 0.05938
+    },
+    {
+      "attempt": 1,
+      "global_step": 48,
+      "loss_bearing_tokens": 258,
+      "loss_bearing_tokens_per_second": 2061.691,
+      "microbatches": 2,
+      "raw_tokens": 260,
+      "raw_tokens_per_second": 2077.673,
+      "wall_seconds": 0.12514
+    },
+    {
+      "attempt": 1,
+      "global_step": 49,
+      "loss_bearing_tokens": 215,
+      "loss_bearing_tokens_per_second": 3331.629,
+      "microbatches": 1,
+      "raw_tokens": 216,
+      "raw_tokens_per_second": 3347.125,
+      "wall_seconds": 0.064533
+    }
+  ],
+  "steps_measured": 45,
+  "steps_without_timings": [],
+  "total_loss_bearing_tokens": 8488,
+  "total_raw_tokens": 10257,
+  "total_wall_seconds": 4.055112
+}
